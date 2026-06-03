@@ -33,7 +33,7 @@ Logs every user-bot exchange with associated metadata.
 Summarizes each session and maintains a cumulative user history (for registered users).
 
 # 📁 Project Structure
-
+```
 oncana-chatbot/
 │
 ├── src/                          # Python backend source files
@@ -74,7 +74,7 @@ oncana-chatbot/
 ├── requirements.txt              # Python dependencies
 ├── oncana-service-account.json   # Gemini API credentials file
 └── README.md                     # Project documentation
-
+```
 
 Environment Configuration: 
 To run the Oncana Chatbot, you must configure both the local Python environment and connect it with Google Cloud Vertex AI. Follow these steps to prepare the system:
