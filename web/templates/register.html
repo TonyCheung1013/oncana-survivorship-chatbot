@@ -1,0 +1,68 @@
+<!-- --- web/templates/register.html --- -->
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Oncana Registration</title>
+  <link rel="stylesheet" href="../static/css/register-style.css">
+</head>
+
+<body>
+  <div class="registration-container">
+    <h2>Register to Oncana</h2>
+    <form id="registration-form">
+      <div class="form-group">
+        <label for="user_id">User ID</label>
+        <input type="text" id="user_id" required>
+      </div>
+
+      <div class="form-group">
+        <label for="name">Full Name</label>
+        <input type="text" id="name" required>
+      </div>
+
+      <div class="form-group">
+        <label for="password">Password</label>
+        <input type="password" id="password" required>
+      </div>
+
+      <div class="form-group">
+        <label for="age">Age</label>
+        <input type="number" id="age" required>
+      </div>
+
+      <div class="form-group">
+        <label for="cancer_type">Cancer Type</label>
+        <select id="cancer_type">
+          <option value="">Select</option>
+          <option value="Breast Cancer">Breast Cancer</option>
+          <option value="Lung Cancer">Lung Cancer</option>
+          <option value="Colon Cancer">Colon Cancer</option>
+          <option value="Other">Other</option>
+        </select>
+        <input type="text" id="custom_cancer" class="hidden" placeholder="Please specify">
+      </div>
+
+      <div class="form-group">
+        <label for="treatment_history">Treatment History</label>
+        <select id="treatment_history">
+          <option value="">Select</option>
+          <option value="Chemotherapy">Chemotherapy</option>
+          <option value="Radiation Therapy">Radiation Therapy</option>
+          <option value="Surgery">Surgery</option>
+          <option value="Other">Other</option>
+        </select>
+        <input type="text" id="custom_treatment" class="hidden" placeholder="Please specify">
+      </div>
+
+      <button type="submit">Register</button>
+      <div class="message" id="registration-message"></div>
+    </form>
+  </div>
+
+  <script src="../static/js/register-script.js"></script>
+</body>
+
+</html>

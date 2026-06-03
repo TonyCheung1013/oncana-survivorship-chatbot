@@ -1,0 +1,235 @@
+/* --- web/static/css/style.css --- */
+
+/* Fonts */
+@font-face {
+  font-family: 'Albra';
+  src: url('../fonts/Albra-Medium.otf') format('opentype');
+  font-weight: 600;
+}
+
+@font-face {
+  font-family: 'Albra';
+  src: url('../fonts/Albra-Bold.otf') format('opentype');
+  font-weight: 700;
+}
+
+@font-face {
+  font-family: 'Raleway';
+  src: url('../fonts/Raleway-Regular.ttf') format('truetype');
+  font-weight: 400;
+}
+
+@font-face {
+  font-family: 'Raleway';
+  src: url('../fonts/Raleway-Light.ttf') format('truetype');
+  font-weight: 300;
+}
+
+/* General */
+body {
+  background-color: #f9f6f3;
+  font-family: 'Raleway', sans-serif;
+  margin: 0;
+  padding: 0;
+  color: #566862;
+}
+
+/* Header */
+header {
+  background-color: #fff;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0.5rem 2rem;
+  position: sticky;
+  top: 0;
+  z-index: 100;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+}
+
+header img {
+  height: 50px;
+}
+
+header .title {
+  font-family: 'Albra', serif;
+  font-weight: 600;
+  color: #566862;
+  font-size: 1.2rem;
+}
+
+/* Main */
+main {
+  padding: 1rem 2rem;
+  max-width: 1100px;
+  margin: auto;
+}
+
+/* Collapsible Section */
+.collapsible {
+  border-top: 1px solid #ddd;
+  padding: 1rem 0;
+}
+
+.collapsible-header {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  cursor: pointer;
+  font-family: 'Albra Semi', sans-serif;
+  font-size: 1.2rem;
+  color: #d86e34;
+  margin-bottom: 0.5rem;
+}
+
+.collapsible-header .arrow {
+  font-size: 0.6rem; /* smaller size */
+  transition: transform 0.3s ease;
+  margin-right: 0.4rem;
+}
+
+
+.collapsible-header.active .arrow {
+  transform: rotate(90deg);
+}
+
+.collapsible-content {
+  display: none;
+  margin-bottom: 1rem;
+}
+
+.table-section {
+  margin: 1rem 0;
+}
+
+/* Table */
+table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-top: 0.5rem;
+}
+
+th, td {
+  text-align: left;
+  padding: 0.8rem;
+  border-bottom: 1px solid #e0e0e0;
+  vertical-align: top;
+  max-width: 350px;
+  word-wrap: break-word;
+}
+
+td {
+  max-height: 4.5em;
+  overflow: auto;
+}
+
+th {
+  background-color: #f4ede4;
+  color: #566862;
+}
+
+.table-title {
+  color: #566862;
+  font-weight: 500;
+  margin-bottom: 0.5rem;
+}
+
+/* Buttons */
+button {
+  background-color: #566862;
+  color: white;
+  border: none;
+  padding: 0.6rem 1.2rem;
+  margin: 0.5rem 0;
+  border-radius: 2rem;
+  cursor: pointer;
+  font-size: 0.9rem;
+  font-family: 'Albra', serif;
+  font-weight: 700;
+}
+
+button:hover {
+  background-color: #566862;
+}
+
+/* Modal */
+.modal {
+  display: none;
+  position: fixed;
+  z-index: 100;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  overflow: auto;
+  background-color: rgba(0, 0, 0, 0.4);
+}
+
+.modal-content {
+  background-color: #fff;
+  margin: 8% auto;
+  padding: 2rem;
+  border-radius: 1rem;
+  width: 90%;
+  max-width: 500px;
+  color: #566862;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+}
+
+.close {
+  color: #999;
+  float: right;
+  font-size: 1.4rem;
+  font-weight: bold;
+  cursor: pointer;
+}
+
+.close:hover {
+  color: #555;
+}
+
+.modal-content input[type="text"],
+.modal-content input[type="number"],
+.modal-content input[type="email"],
+.modal-content textarea {
+  width: 100%;
+  padding: 0.6rem;
+  margin: 0.5rem 0;
+  border: 1px solid #ddd;
+  border-radius: 0.6rem;
+  background-color: #f9f6f3;
+}
+
+.modal-content button {
+  background-color: #566862;
+  color: white;
+  padding: 0.6rem 1.2rem;
+  border: none;
+  border-radius: 2rem;
+  cursor: pointer;
+  margin-top: 1rem;
+}
+
+.modal-content button:hover {
+  background-color: #566862;
+}
+
+/* Footer */
+footer {
+  text-align: center;
+  padding: 1rem;
+  color: #999;
+  background-color: rgba(255, 255, 255, 0.2); /* White with transparency */
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  font-size: 0.9rem;
+}
+
+
+
+
+
+
+

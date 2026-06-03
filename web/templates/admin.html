@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Oncana Admin Panel</title>
+  <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+</head>
+
+<body>
+
+  <header>
+    <img src="{{ url_for('static', filename='images/Oncana_Wordmark_Forest.png') }}" alt="Oncana Logo">
+    <div class="title">Admin Panel</div>
+  </header>
+
+  <main>
+
+    <section class="collapsible">
+      <h2 class="collapsible-header">
+        <span class="arrow">&#9654;</span> Data Management
+      </h2>
+      <div class="collapsible-content">
+        <div id="topics-section" class="table-section">
+          <h3>Topics</h3>
+          <button onclick="openModal('add', 'topics')">Add New Topic</button>
+          <table id="topics-table"></table>
+        </div>
+        <div id="subtopics-section" class="table-section">
+          <h3>Subtopics</h3>
+          <button onclick="openModal('add', 'subtopics')">Add New Subtopic</button>
+          <table id="subtopics-table"></table>
+        </div>
+        <div id="resource-section" class="table-section">
+          <h3>Resource Contents</h3>
+          <button onclick="openModal('add', 'resource_contents')">Add New Content</button>
+          <table id="resource-table"></table>
+        </div>
+        <div id="contacts-section" class="table-section">
+          <h3>Contacts</h3>
+          <button onclick="openModal('add', 'contacts')">Add New Contact</button>
+          <table id="contacts-table"></table>
+        </div>
+      </div>
+    </section>
+
+    <section class="collapsible">
+      <h2 class="collapsible-header">
+        <span class="arrow">&#9654;</span> User Management
+      </h2>
+      <div class="collapsible-content">
+        <div id="users-section" class="table-section">
+          <h3>Users</h3>
+          <button onclick="openModal('add', 'users')">Add New User</button>
+          <table id="users-table"></table>
+        </div>
+      </div>
+    </section>
+
+    <section class="collapsible">
+      <h2 class="collapsible-header">
+        <span class="arrow">&#9654;</span> Logs
+      </h2>
+      <div class="collapsible-content">
+        <div id="logs-section" class="table-section">
+          <h3>Conversation Logs</h3>
+          <table id="conversation-logs-table"></table>
+        </div>
+        <div id="summaries-section" class="table-section">
+          <h3>Conversation Summaries</h3>
+          <table id="conversation-summaries-table"></table>
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <footer>
+    © 2025 Oncana Admin Panel
+  </footer>
+
+  <!-- Modal -->
+  <div id="dataModal" class="modal">
+    <div class="modal-content">
+      <span class="close" onclick="closeModal()">&times;</span>
+      <form id="dataForm">
+        <div id="formFields"></div>
+        <button type="submit">Save</button>
+      </form>
+    </div>
+  </div>
+
+  <script src="{{ url_for('static', filename='js/script.js') }}"></script>
+</body>
+
+</html>

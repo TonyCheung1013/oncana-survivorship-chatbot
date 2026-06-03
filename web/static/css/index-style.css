@@ -1,0 +1,204 @@
+/* --- Fonts --- */
+@font-face {
+    font-family: 'Albra';
+    src: url('../fonts/Albra-Medium.otf') format('opentype');
+    font-weight: 600;
+  }
+  
+  @font-face {
+    font-family: 'Albra';
+    src: url('../fonts/Albra-Bold.otf') format('opentype');
+    font-weight: 700;
+  }
+  
+  @font-face {
+    font-family: 'Raleway';
+    src: url('../fonts/Raleway-Regular.ttf') format('truetype');
+    font-weight: 400;
+  }
+  
+  @font-face {
+    font-family: 'Raleway';
+    src: url('../fonts/Raleway-Light.ttf') format('truetype');
+    font-weight: 300;
+  }
+  
+  /* --- General --- */
+  body {
+    background: url('../images/landing-background.png') no-repeat center center fixed;
+    background-size: cover;
+    margin: 0;
+    font-family: 'Raleway', sans-serif;
+    color: #566862;
+  }
+  
+  /* --- Chat Button --- */
+  #open-chat {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    background-color: #566862;
+    color: white;
+    border: none;
+    padding: 0.8rem 1.2rem;
+    border-radius: 2rem;
+    cursor: pointer;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    font-family: 'Albra', serif;
+    font-weight: 600;
+  }
+  
+  #open-chat:hover {
+    background-color: #3a4a42;
+  }
+  
+  /* --- Chat Popup --- */
+  .chat-popup {
+    position: fixed;
+    bottom: 80px;
+    right: 20px;
+    width: 800px;
+    max-width: 90%;
+    max-height: 600px;
+    background-color: #fff;
+    border-radius: 1rem;
+    box-shadow: 0 6px 16px rgba(0, 0, 0, 0.3);
+    display: none;
+    flex-direction: column;
+    overflow: hidden;
+    z-index: 200;
+  }
+  
+  .chat-popup.open {
+    display: flex;
+    max-height: 80vh; /* up to 80% of screen */
+  }
+  
+  /* --- Header --- */
+  .chat-header {
+    display: flex;
+    justify-content: space-between; /* <-- spread left and right */
+    align-items: center;
+    background-color: #E9DFD3;
+    padding: 0.6rem 1rem;
+    border-bottom: 1px solid #ccc;
+  }
+  
+  .left-header {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+  }
+  
+  .chat-header img {
+    height: 30px;
+  }
+  
+  .chat-header span {
+    font-family: 'Albra', serif;
+    font-weight: 600;
+    color: #566862;
+    font-size: 1rem;
+  }
+  
+  .end-chat-button {
+    background-color: transparent;
+    border: 1px solid #d86e34;
+    color: #d86e34;
+    padding: 0.3rem 0.8rem;
+    border-radius: 1rem;
+    cursor: pointer;
+    font-size: 0.85rem;
+  }
+  
+  .end-chat-button:hover {
+    background-color: #d86e34;
+    color: white;
+  }
+  
+  /* --- Messages --- */
+  .chat-messages {
+    flex: 1;
+    padding: 1rem;
+    overflow-y: auto;
+  }
+  
+  .message {
+    margin-bottom: 0.8rem;
+  }
+  
+  .message.user {
+    text-align: right;
+  }
+  
+  .message.bot {
+    text-align: left;
+  }
+  
+  .user-icon {
+    background-color: #566862;
+    color: white;
+    padding: 0.2rem 0.5rem;
+    border-radius: 50%;
+    font-size: 0.9rem;
+    margin-right: 0.4rem;
+  }
+  
+  .bot-icon {
+    width: 24px;
+    height: 24px;
+    vertical-align: middle;
+    margin-right: 0.4rem;
+  }
+  
+  /* --- Input --- */
+  .chat-input {
+    display: flex;
+    border-top: 1px solid #eee;
+  }
+  
+  .chat-input input {
+    flex: 1;
+    border: none;
+    padding: 0.8rem;
+    font-size: 0.9rem;
+    outline: none;
+  }
+  
+  .chat-input button {
+    background-color: #566862;
+    color: white;
+    border: none;
+    padding: 0.8rem 1rem;
+    font-family: 'Albra', serif;
+    font-weight: 600;
+    cursor: pointer;
+    border-top-right-radius: 1rem;
+  }
+  
+  .chat-input button:hover {
+    background-color: #3a4a42;
+  }
+  
+  .chat-button {
+    position: fixed;
+    bottom: 1.5rem;
+    right: 1.5rem;
+    background-color: #566862;
+    color: white;
+    border: none;
+    border-radius: 2rem;
+    padding: 0.8rem 1.5rem;
+    display: flex;
+    align-items: center;
+    gap: 0.8rem;
+    cursor: pointer;
+    z-index: 100;
+  }
+  
+  .chat-button img {
+    height: 28px; /* adjust to your desired height */
+    width: auto;
+    object-fit: contain;
+  }
+  
