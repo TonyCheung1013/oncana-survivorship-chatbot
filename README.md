@@ -43,7 +43,7 @@ oncana-chatbot/
 │   ├── conversation_manager.py   # Logging and session summary handler
 │
 ├── data/
-│   └── oncana_chatbot.db         # SQLite database file
+│   └── oncana_chatbot.db         # ⚠️ Not included. Run init_database.py to generate.
 │
 ├── sql/
 │   └── schema.sql                # Database schema for initializing tables (for development stage only)
@@ -67,12 +67,12 @@ oncana-chatbot/
 │   │   │   ├── admin-script.js   # Admin interaction
 │   │   │   └── register-script.js# Registration form handling
 │   │   │
-│   │   ├── fonts/                # Albra, Raleway font files
-│   │   └── images/               # Oncana logo and background assets
+│   │   ├── fonts/                # ⚠️ Not included. Obtain fonts separately.
+│   │   └── images/               # ⚠️ Not included. Obtain assets from Oncana.
 │
 ├── .venv/                        # Python virtual environment
 ├── requirements.txt              # Python dependencies
-├── oncana-service-account.json   # Gemini API credentials file
+├── oncana-service-account.json   # ⚠️ NOT included. Add your own credentials file.
 └── README.md                     # Project documentation
 ```
 
