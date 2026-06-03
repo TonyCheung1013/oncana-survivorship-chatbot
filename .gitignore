@@ -1,0 +1,27 @@
+# Google Cloud credentials
+*.json
+
+# Database
+*.db
+data/
+
+# Python cache
+__pycache__/
+*.pyc
+*.pyo
+
+# Virtual environment
+.venv/
+venv/
+
+# Fonts and images (licensed assets)
+web/static/fonts/
+web/static/images/
+
+# OS files
+.DS_Store
+Thumbs.db
+
+# IDE files
+.vscode/
+.idea/
